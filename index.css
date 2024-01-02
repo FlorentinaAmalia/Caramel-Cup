@@ -10,6 +10,11 @@ body {
     overflow-x: hidden;
 }
 
+body section {
+    padding: 50px calc(20% + 90px);
+    transition: 0.2s;
+}
+
 nav.navbar {
     position: sticky;
     top: 0;
@@ -19,6 +24,7 @@ nav.navbar {
 
     height: 100px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -48,7 +54,9 @@ nav.navbar img {
 
 nav.navbar ul {
     display: flex;
+    flex-direction: row;
     list-style-type: none;
+    gap: 15px;
 }
 
 nav.navbar a {
@@ -58,11 +66,18 @@ nav.navbar a {
     font-size: 1.3rem;
 }
 
+/* menu nav.navbar a:visited {
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+} */
+
 .buttons {
     position: absolute;
     right: 10px;
     font-size: 1.2rem;
     color: black;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 section.hero {
@@ -75,8 +90,6 @@ section.hero {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     color: #feefdf;
 }
 
@@ -87,7 +100,7 @@ section.hero h1 {
     position: relative;
     max-width: 500px;
     z-index: 1;
-    margin: 0px 20%;
+    margin: 0 20%;
     transition: 0.2s;
 }
 
@@ -107,12 +120,49 @@ section.hero::before {
     z-index: 0;
 }
 
-section.program-info {
-    height: 50vh;
+/* all sections  */
+section {
+    font-size: 1.3rem;
+    transition: 0.3s;
+    transform: translateX(0%);
 }
+
+section h2 {
+    margin-bottom: 30px;
+}
+
+section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* all sections end */
+
+/* introduction section */
+
+section.introduction {
+    /* height: 50vh; */
+}
+
+/* .introduction {
+    font-size: 1.3rem;
+} */
+
+/* .introduction h2 {
+    margin-bottom: 10px;
+} */
+
+/* .introduction p {
+    line-height: 1.6;
+} */
+/* introduction section end */
 
 .hidden,
 .hidden * {
+    display: none;
+}
+
+nav.navbar ul.hidden {
     display: none;
 }
 
@@ -165,7 +215,11 @@ footer .socials a {
 
 /* media queries */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
+    body section {
+        padding: 50px 10% 20px calc(10% + 90px);
+    }
+
     nav.navbar {
         height: auto;
         padding: 5px 10%;
@@ -183,8 +237,16 @@ footer .socials a {
         margin: 5px;
     }
 
+    .buttons {
+        font-size: 1.5rem;
+        padding: 5px 10%;
+    }
     section.hero {
         margin-top: -230px;
+    }
+
+    section {
+        font-size: 1.2rem;
     }
 
     /* footer */
@@ -192,28 +254,31 @@ footer .socials a {
         padding: 50px 10% 50px 5%;
         display: flex;
         flex-direction: column;
-        /* height: 35vh; */
         gap: 20px;
-        /* font-size: 1.2rem; */
     }
 }
 
 @media (max-width: 600px) {
+    body section {
+        padding: 50px 5% 10px calc(5% + 90px);
+    }
+
     nav.navbar {
         padding: 5px 5%;
-    }
-    .buttons {
-        font-size: 1.5rem;
     }
 
     section.hero p,
     section.hero h1 {
         font-size: 2rem;
-        margin: 0px 10%;
+        margin: 0 10%;
     }
 
     section.hero p {
         font-size: 1.2rem;
         max-width: fit-content;
+    }
+
+    .buttons {
+        padding: 5px 2%;
     }
 }
