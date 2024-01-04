@@ -2,8 +2,109 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1,minimum-scale=1
+        , user-scalable=0"
+        />
+        <script
+            src="https://kit.fontawesome.com/9239563d7d.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="contact.css" />
+        <title>Contact us</title>
     </head>
-    <body></body>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/images/logo.png" alt="coffee cup logo" />
+                <p>Caramel Cup</p>
+                <div class="buttons">
+                    <i class="fa-solid fa-bars menu"></i>
+                    <i class="fa-solid fa-x menu-close hidden"></i>
+                </div>
+            </div>
+            <ul class="">
+                <li><a href="/index.html">Home</a></li>
+                <!-- <li><a href="pages/about_us/about.html">About us</a></li> -->
+                <li><a href="/pages/about_us/about.html">About us</a></li>
+                <li><a href="/pages/menu/menu.html">Menu</a></li>
+                <li><a href="/pages/contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="contact">
+            <h2>Send us a message!</h2>
+            <form action="" class="form-contact">
+                <div>
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="John Doe"
+                    />
+                </div>
+                <div class="error error-name hidden">
+                    Please fill out this field.
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="john.doe@gmail.com"
+                    />
+                </div>
+                <div class="error error-email hidden">
+                    Please enter a valid email adress.
+                </div>
+
+                <label for="message">Message</label>
+
+                <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    spellcheck="false"
+                ></textarea>
+                <div class="error error-message hidden">
+                    Please fill out this field.
+                </div>
+                <button type="submit">Send message</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-socials">
+                <h4>Find us here</h4>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact us</h4>
+                <div class="contact-item email">
+                    <i class="fa-solid fa-at"></i>
+                    ciublan.florentina@gmail.com
+                </div>
+                <div class="contact-item phone">
+                    <i class="fa-solid fa-phone"></i>
+                    0722-222-2222
+                </div>
+            </div>
+            <div class="footer-location">
+                <h4>We are located</h4>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione, vero.
+            </div>
+        </footer>
+    </body>
+    <script src="contact.js"></script>
 </html>
