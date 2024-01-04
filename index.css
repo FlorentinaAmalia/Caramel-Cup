@@ -91,7 +91,15 @@ section.hero {
 
 section.hero p.credit {
     position: absolute;
-    bottom: 0%;
+    height: 100px;
+    right: -5%;
+    top: 95%;
+    font-size: 0.8rem;
+    color: white;
+}
+
+section.hero p.credit a {
+    color: white;
 }
 
 section.hero p,
